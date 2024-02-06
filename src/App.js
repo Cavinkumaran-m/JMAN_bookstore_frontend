@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./Pages/Login_Page";
 import NotFound from "./Pages/NotFound/NotFound";
 import Home from "./Pages/Home/Home";
-import { UserContext } from "./Context/UserContext";
+import { UserContext } from "./CustomFunctionalities/Context/UserContext";
 import { useState } from "react";
 import Header from "./Components/Header/Header";
 import Search from "./Pages/Search/Search";
