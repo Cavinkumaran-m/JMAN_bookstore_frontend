@@ -4,12 +4,16 @@ import LoginPage from "./Pages/Login_Page";
 import NotFound from "./Pages/NotFound/NotFound";
 import Home from "./Pages/Home/Home";
 import { UserContext } from "./Context/UserContext";
-
+import { useState } from "react";
+import Header from "./Components/Header/Header";
+import Search from "./Pages/Search/Search";
+import WishList from "./Pages/WishList/WishList";
+import Cart from "./Pages/Cart/Cart";
 function App() {
   // Use this context to store data locally
   const [Store, setStore] = useState({
     isLoggedIn: false,
-    user_name: null,
+    user_id: null,
     cart_items: null,
   });
 
@@ -24,9 +28,13 @@ function App() {
   return (
     <UserContext.Provider value={{ Store, setStore }}>
       <Router>
+        <Header></Header>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/wishlist" element={<WishList />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
