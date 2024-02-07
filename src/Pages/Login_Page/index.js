@@ -9,7 +9,7 @@ import {
   Link as MuiLink,
 } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
-import "./index.css";
+import style from "./index.module.css";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -24,9 +24,9 @@ const LoginPage = () => {
   };
 
   return (
-    <Container component="main" maxWidth="xs" className="container">
-      <Paper elevation={3} className="paper">
-        <Box className="formContainer">
+    <Container component="main" maxWidth="xs" className={style.container}>
+      <Paper elevation={3} className={style.paper}>
+        <Box className={style.formContainer}>
           <Typography component="h1" variant="h5">
             Sign in to continue for Shopping
           </Typography>
@@ -55,10 +55,11 @@ const LoginPage = () => {
               type="submit"
               fullWidth
               variant="contained"
-              className="submitButton">
+              className={style.submitButton}
+            >
               Sign In
             </Button>
-            <Box className="linksContainer">
+            <Box className={style.linksContainer}>
               <MuiLink component={Link} to="/forgot-email" variant="body2">
                 Forgot email?
               </MuiLink>
