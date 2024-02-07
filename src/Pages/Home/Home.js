@@ -13,32 +13,11 @@ function Home(props) {
   }, []);
   return (
     <>
-      {trendingBooks === null && <BookCardLoader />}
-      {trendingBooks !== null && trendingBooks.length === 0 && (
-        <div className="bg-white display-5 py-3 my-3 container rounded">
-          <center>
-            <span>No Auctions Going On</span>
-            <br></br>
-            😐😐😐
-          </center>
-        </div>
-      )}
-      {/* <span className="display-5 px-5 my-3">On-Going Auctions</span> */}
-      <div className="container-fluid d-flex justify-content-center flex-column mt-3">
-        {trendingBooks !== null &&
-          trendingBooks.map((data, index) => (
-            <BookCard
-              key={index}
-              title={data.item_name}
-              desc={data.item_desc}
-              price={data.start_price}
-              image={data.item_image}
-              id={data.bid_id}
-              home
-            ></BookCard>
-          ))}
-
-        {/* <WS></WS> */}
+      <div className="mt-5 bg-dark container">
+        <div
+          className="bg-light"
+          style={{ width: "100%", height: "50px" }}
+        ></div>
       </div>
     </>
   );
