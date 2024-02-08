@@ -55,12 +55,13 @@ const LoginPage = () => {
               type="submit"
               fullWidth
               variant="contained"
-              className={style.submitButton}>
+              className={style.submitButton}
+            >
               Sign In
             </Button>
             <Box className={style.linksContainer}>
               <MuiLink component={Link} to="/forgot-email" variant="body2">
-                Forgot Password?
+                Forgot email?
               </MuiLink>
               <MuiLink component={Link} to="/create-account" variant="body2">
                 Create account
