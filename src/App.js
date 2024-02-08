@@ -1,14 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LoginPage from "./Pages/Login_Page";
-import NotFound from "./Pages/NotFound/NotFound";
-import Home from "./Pages/Home/Home";
-import { UserContext } from "./CustomFunctionalities/Context/UserContext";
+import LoginPage from "./Pages/LoginPage";
+import Register from "./Pages/Registeration";
+import ForgotPassword from "./Pages/ForgotPassword";
 import { useState } from "react";
-import Header from "./Components/Header/Header";
-import Search from "./Pages/Search/Search";
-import WishList from "./Pages/WishList/WishList";
-import Cart from "./Pages/Cart/Cart";
 function App() {
   // Use this context to store data locally
   const [Store, setStore] = useState({
@@ -26,19 +21,13 @@ function App() {
   // Store.setStore({<new data>})
 
   return (
-    <UserContext.Provider value={{ Store, setStore }}>
-      <Router>
-        <Header></Header>
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/wishlist" element={<WishList />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Router>
-    </UserContext.Provider>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+      </Routes>
+    </Router>
   );
 }
 
