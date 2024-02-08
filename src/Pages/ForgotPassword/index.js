@@ -9,7 +9,7 @@ import {
   Link as MuiLink,
 } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
-import "./index.css";
+import style from "./index.module.css";
 
 const ForgotPassword = () => {
   const navigate = useNavigate();
@@ -41,9 +41,9 @@ const ForgotPassword = () => {
   };
 
   return (
-    <Container component="main" maxWidth="xs" className="container">
-      <Paper elevation={3} className="paper">
-        <Box className="formContainer">
+    <Container component="main" maxWidth="xs" className={style.container}>
+      <Paper elevation={3} className={style.paper}>
+        <Box className={style.formContainer}>
           <Typography component="h1" variant="h5">
             Recover your account
           </Typography>
@@ -64,7 +64,8 @@ const ForgotPassword = () => {
                 type="submit"
                 fullWidth
                 variant="contained"
-                className="submitButton">
+                className={style.submitButton}
+              >
                 Get OTP
               </Button>
             )}
@@ -88,8 +89,9 @@ const ForgotPassword = () => {
                   type="button"
                   fullWidth
                   variant="contained"
-                  className="verifyButton"
-                  onClick={handleVerifyOTP}>
+                  className={style.verifyButton}
+                  onClick={handleVerifyOTP}
+                >
                   Verify OTP
                 </Button>
 
@@ -97,9 +99,10 @@ const ForgotPassword = () => {
                   type="button"
                   fullWidth
                   variant="contained"
-                  className="resendButton"
+                  className={style.resendButton}
                   sx={{ mt: 2 }}
-                  onClick={handleResendOTP}>
+                  onClick={handleResendOTP}
+                >
                   Resend OTP
                 </Button>
               </>

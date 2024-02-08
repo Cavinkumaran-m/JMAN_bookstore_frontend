@@ -11,7 +11,7 @@ import {
 import { MdEmail } from "react-icons/md";
 
 import { CgGenderMale } from "react-icons/cg";
-import "./index.css"; // Import CSS file
+import style from "./index.module.css"; // Import CSS file
 
 const Register = () => {
   const navigate = useNavigate();
@@ -28,98 +28,100 @@ const Register = () => {
   };
 
   return (
-    <section className="register-bg">
-      <div className="register-container">
-        <div className="register-card">
-          <div className="register-content">
-            <h1 className="register-heading">Create an account</h1>
-            <form className="form-container" onSubmit={handleRegister}>
-              <div className="input-group">
-                <FaUser className="input-icon" />
+    <section className={style.register_bg}>
+      <div className={style.register_container}>
+        <div className={style.register_card}>
+          <div className={style.register_content}>
+            <h1 className={style.register_heading}>Create an account</h1>
+            <form className={style.form_container} onSubmit={handleRegister}>
+              <div className={style.input_group}>
+                <FaUser className={style.input_icon} />
                 <input
                   type="text"
                   id="name"
                   placeholder="Your Name"
                   required
-                  className="input-field"
+                  className={style.input_field}
                 />
               </div>
 
-              <div className="input-group">
-                <CgGenderMale className="input-icon" />
-                <select id="gender" required className="input-select">
+              <div className={style.input_group}>
+                <CgGenderMale className={style.input_icon} />
+                <select id="gender" required className={style.input_select}>
                   <option value="">Select Gender</option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                   <option value="Other">Other</option>
                 </select>
               </div>
-              <div className="input-group">
-                <MdEmail className="input-icon" />
+              <div className={style.input_group}>
+                <MdEmail className={style.input_icon} />
                 <input
                   type="email"
                   id="email"
                   placeholder="Your Email"
                   required
-                  className="input-field"
+                  className={style.input_field}
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                   title="Please enter a valid email address."
                 />
               </div>
-              <div className="input-group">
-                <FaPhoneAlt className="input-icon" />
+              <div className={style.input_group}>
+                <FaPhoneAlt className={style.input_icon} />
                 <input
                   type="tel"
                   id="phone"
                   placeholder="Your Phone"
                   required
-                  className="input-field"
+                  className={style.input_field}
                   pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
                   title="Please enter a valid phone number."
                 />
               </div>
-              <div className="input-group">
-                <FaLock className="input-icon" />
+              <div className={style.input_group}>
+                <FaLock className={style.input_icon} />
                 <input
                   type="password"
                   id="password"
                   placeholder="Password"
                   required
-                  className="input-field"
+                  className={style.input_field}
                 />
               </div>
-              <div className="input-group">
-                <FaLock className="input-icon" />
+              <div className={style.input_group}>
+                <FaLock className={style.input_icon} />
                 <input
                   type="password"
                   id="confirm-password"
                   placeholder="Confirm Password"
                   required
-                  className="input-field"
+                  className={style.input_field}
                 />
               </div>
 
-              <div className="input-group">
-                <FaSearchLocation className="input-icon" />
+              <div className={style.input_group}>
+                <FaSearchLocation className={style.input_icon} />
                 <textarea
                   id="address"
                   placeholder="Your Address"
                   rows="4"
                   required
-                  className="textarea-field"></textarea>
+                  className={style.textarea_field}
+                ></textarea>
               </div>
               <button
                 type="submit"
-                className="register-btn"
+                className={style.register_btn}
                 sx={{
                   color: "white",
-                }}>
+                }}
+              >
                 R E G I S T E R
               </button>
             </form>
-            <p className="login-redirect">
+            <p className={style.login_redirect}>
               Already have an account?{" "}
-              <Link to="/login" className="login-link">
+              <Link to="/login" className={style.login_link}>
                 Login here
               </Link>
             </p>
