@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./Pages/LoginPage";
 import Register from "./Pages/Registeration";
 import ForgotPassword from "./Pages/ForgotPassword";
-
+import { useState } from "react";
 function App() {
   // Use this context to store data locally
   const [Store, setStore] = useState({

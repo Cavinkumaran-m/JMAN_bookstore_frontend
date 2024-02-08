@@ -60,7 +60,7 @@ const LoginPage = () => {
             </Button>
             <Box className={style.linksContainer}>
               <MuiLink component={Link} to="/forgot-email" variant="body2">
-                Forgot email?
+                Forgot Password?
               </MuiLink>
               <MuiLink component={Link} to="/create-account" variant="body2">
                 Create account
