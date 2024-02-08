@@ -1,6 +1,7 @@
 /* LoginPage.css */
 .container {
   display: flex;
+  margin-top: 10%;
   justify-content: center;
   align-items: center;
   height: 100vh;

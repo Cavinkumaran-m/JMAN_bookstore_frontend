@@ -28,7 +28,7 @@ const LoginPage = () => {
       <Paper elevation={3} className="paper">
         <Box className="formContainer">
           <Typography component="h1" variant="h5">
-            Sign in to continue for Shopping
+            Sign in to continue
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit}>
             <TextField
@@ -59,10 +59,10 @@ const LoginPage = () => {
               Sign In
             </Button>
             <Box className="linksContainer">
-              <MuiLink component={Link} to="/forgot-email" variant="body2">
+              <MuiLink component={Link} to="/forgot-password" variant="body2">
                 Forgot email?
               </MuiLink>
-              <MuiLink component={Link} to="/create-account" variant="body2">
+              <MuiLink component={Link} to="/register" variant="body2">
                 Create account
               </MuiLink>
             </Box>
